@@ -1,8 +1,0 @@
-setup.py
-easyfile/__init__.py
-easyfile/main.py
-easyfile.egg-info/PKG-INFO
-easyfile.egg-info/SOURCES.txt
-easyfile.egg-info/dependency_links.txt
-easyfile.egg-info/requires.txt
-easyfile.egg-info/top_level.txt

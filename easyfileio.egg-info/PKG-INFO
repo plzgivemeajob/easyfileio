@@ -1,3 +1,12 @@
+Metadata-Version: 2.4
+Name: easyfileio
+Version: 1.1
+Description-Content-Type: text/markdown
+Requires-Dist: None
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+
 # how to use easyfileio
 
 easyfileio is a simple program that makes inputs and outputs of file simple and easy.

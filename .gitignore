@@ -1,0 +1,7 @@
+.pypirc
+.venv/
+build/
+dist/
+easyfile.egg-info/
+simplefile.egg-info/
+setup.py
