@@ -1,11 +1,15 @@
 Metadata-Version: 2.4
 Name: easyfileio
-Version: 1.11
+Version: 1.1.2
+Summary: an easy way to read and write files in python
+Home-page: https://github.com/plzgivemeajob/easyfileio
+License: MIT
 Description-Content-Type: text/markdown
-Requires-Dist: None
 Dynamic: description
 Dynamic: description-content-type
-Dynamic: requires-dist
+Dynamic: home-page
+Dynamic: license
+Dynamic: summary
 
 # how to use easyfileio
 

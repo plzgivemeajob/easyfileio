@@ -121,7 +121,7 @@ class content:
     def fetch(self, no_strip=False):
         iList = []
         if not os.path.exists(self.file):
-            return None
+            return []
         with open(self.file, 'r', encoding=self.encoder) as o:
             file_lines = (o.readlines())
         if no_strip == True:
