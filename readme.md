@@ -4,7 +4,13 @@ easyfileio is a simple program that makes inputs and outputs of file simple and 
 
 ## installation
 
-use `pip install easyfileio`
+write this in command prompt
+
+`pip install easyfileio`
+
+or
+
+`python -m pip install easyfileio`
 
 ## how to use
 
