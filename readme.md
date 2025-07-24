@@ -4,7 +4,7 @@ easyfileio is a simple program that makes inputs and outputs of file simple and 
 
 ## installation
 
-do this that theother
+use `pip install easyfileio`
 
 ## how to use
 
