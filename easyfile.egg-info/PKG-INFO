@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: easyfile
+Version: 1.2
+Requires-Dist: None
+Dynamic: requires-dist
