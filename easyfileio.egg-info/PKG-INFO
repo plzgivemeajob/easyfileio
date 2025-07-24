@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: easyfileio
-Version: 1.1.2
+Version: 1.1.3
 Summary: an easy way to read and write files in python
 Home-page: https://github.com/plzgivemeajob/easyfileio
 License: MIT
