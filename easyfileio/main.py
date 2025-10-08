@@ -4,13 +4,6 @@ import stat
 def auto_create(var):
     if not os.path.exists(var):
         os.makedirs(var)
-
-def exists(file):
-    try:
-        with open(file, 'r') as o:
-            return True
-    except FileNotFoundError:
-        return False
     
 def lock_file(file):
     if os.path.exists(file):
@@ -178,6 +171,14 @@ class content:
         if self.lock != lock:
             self.lock = lock
         del self.fileContent[thingToDeleteIndex]
+        self.save(self.fileContent, overwrite=True, lock=lock)
+
+    def delete_bulk(self, thingToDeleteIndexList, lock=False):
+        if self.lock != lock:
+            self.lock = lock
+        for index in thingToDeleteIndexList:
+            del self.fileContent[index]
+        os.chmod(self.file, stat.S_IWUSR)
         self.save(self.fileContent, overwrite=True, lock=lock)
             
     def delete_file(self):
