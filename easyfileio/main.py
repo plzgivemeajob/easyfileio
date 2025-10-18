@@ -162,16 +162,22 @@ class content:
             os.chmod(self.file, stat.S_IWUSR)
 
     def change(self, thingToChangeIndex, changedThing, lock=False):
-        self.fileContent[thingToChangeIndex] = changedThing
+        self.fileContent[thingToChangeIndex] = f'{changedThing}\n'
         if self.lock != lock:
             self.lock = lock
-        self.save(self.fileContent, overwrite=True, lock=lock)
+        saveFileContent = ''
+        for i in self.fileContent:
+            saveFileContent += i
+        self.save(saveFileContent, overwrite=True, lock=lock, sameLN=True)
 
     def delete(self, thingToDeleteIndex, lock=False):
         if self.lock != lock:
             self.lock = lock
         del self.fileContent[thingToDeleteIndex]
-        self.save(self.fileContent, overwrite=True, lock=lock)
+        saveFileContent = ''
+        for i in self.fileContent:
+            saveFileContent += i
+        self.save(saveFileContent, overwrite=True, lock=lock, sameLN=True)
 
     def delete_bulk(self, thingToDeleteIndexList, lock=False):
         if self.lock != lock:
@@ -179,7 +185,10 @@ class content:
         for index in thingToDeleteIndexList:
             del self.fileContent[index]
         os.chmod(self.file, stat.S_IWUSR)
-        self.save(self.fileContent, overwrite=True, lock=lock)
+        saveFileContent = ''
+        for i in self.fileContent:
+            saveFileContent += i
+        self.save(saveFileContent, overwrite=True, lock=lock, sameLN=True)
             
     def delete_file(self):
         if os.path.exists(self.file):
@@ -188,12 +197,15 @@ class content:
 
 
 if __name__ == '__main__':
-    string = stringify_list(['list', 'to:save', 'to:list'], ':')
-    input(string)
-    input(de_stringify_list('list:to::save:to::list', ':'))
+    #string = stringify_list(['list', 'to:save', 'to:list'], ':')
+    #input(string)
+    #input(de_stringify_list('list:to::save:to::list', ':'))
 
     ftest = content('test','whyNotWorking.txt')
-    ftest.save('涙')
+    ftest.fetch()
+    #ftest.save('涙')
+    #print(ftest.fetch())
+    ftest.change(0, 'one')
     print(ftest.fetch())
 
     #ftest.change(0, 'true')
